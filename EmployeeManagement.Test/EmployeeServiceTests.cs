@@ -8,7 +8,8 @@ using Xunit;
 
 namespace EmployeeManagement.Test
 {
-    public class EmployeeServiceTests : IClassFixture<EmployeeServiceFixture>
+	[Collection("EmployeeServiceCollection")]
+	public class EmployeeServiceTests 
     {
 		private readonly EmployeeServiceFixture _employeeServiceFixture;
 
