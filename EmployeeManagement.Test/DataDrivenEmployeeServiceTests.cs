@@ -1,5 +1,6 @@
 ﻿using EmployeeManagement.DataAccess.Entities;
 using EmployeeManagement.Test.Fixtures;
+using EmployeeManagement.Test.TestData;
 using Xunit;
 using Xunit.Sdk;
 
@@ -76,6 +77,7 @@ namespace EmployeeManagement.Test
 			1,
 			MemberType = typeof(DataDrivenEmployeeServiceTests))
 		]
+		[ClassData(typeof(EmployeeServiceTestData))]
 		public async Task GiveRaise_RaiseGiven_EmployeeMinimumRaiseGivenMatchesValue(int raiseGiven, bool expectedValueForMinimumRaiseGiven)
 		{
 			var internalEmployee = new InternalEmployee(
