@@ -78,6 +78,7 @@ namespace EmployeeManagement.Test
 			MemberType = typeof(DataDrivenEmployeeServiceTests))
 		]
 		[ClassData(typeof(EmployeeServiceTestData))]
+		[ClassData(typeof(StronglyTypeEmployeeServiceData))]
 		public async Task GiveRaise_RaiseGiven_EmployeeMinimumRaiseGivenMatchesValue(int raiseGiven, bool expectedValueForMinimumRaiseGiven)
 		{
 			var internalEmployee = new InternalEmployee(
